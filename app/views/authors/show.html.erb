@@ -1,0 +1,36 @@
+<header class="page-header">
+  <div class="header-block-container">
+    <h1><%= @author.full_name %></h1>
+    <%= link_to 'Edit', edit_author_path(@author), class: 'button-white-outline' %>
+  </div>
+</header>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @author.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @author.last_name %>
+</p>
+
+<p>
+  <strong>Author country:</strong>
+  <%= @author.author_country %>
+</p>
+
+<p>
+  <strong>Author city:</strong>
+  <%= @author.author_city %>
+</p>
+
+<p>
+  <strong>Author age:</strong>
+  <%= @author.author_age %>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>

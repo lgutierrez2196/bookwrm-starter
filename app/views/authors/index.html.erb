@@ -9,12 +9,12 @@
 <div class="table-block-container">
   <table>
     <tbody>
-      <% @authors.each do |author| %>
+      <% @authors.alphabetical.each do |author| %>
       <tr>
-        <td><%= link_to author.full_name, author %></td>
-        <td><%= author.country%></td>
-        <td><%= author.city%></td>
-        <td><%= author.age%></td>
+        <td><%= link_to author.reverse_name, author %></td>
+        <td><%= author.author_country %></td>
+        <td><%= author.author_city%></td>
+        <td><%= author.author_age%></td>
       <% end %>
     </tbody>
   </table>
