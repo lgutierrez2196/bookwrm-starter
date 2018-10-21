@@ -1,44 +1,28 @@
-<p id="notice"><%= notice %></p>
+<header class="page-header">
+  <div class="header-block-container">
+    <h1><%= @book.title %></h1>
+      <%= link_to 'Back', books_path, class: 'button-white-outline' %>
+  </div>
+</header>
+<section class="book-block-container">
+  <div class="book-block-container">
+     <div class= "book-cover">
+        <% if @book.image_url %>
+          <%= image_tag @book.image_url %>
+        <% end %>
+        </div>
+        <div class="text-block">
+          <br>
+          <br>
+          <h1><%= @book.title %></h1>
+          <h6><%= link_to @book.author.full_name, author_path(@book.author) %></h6>
+          <br>
+          <br>
+          <p><%= @book.description %></p>
+          <%# link_to "Write a Review", new_book_review_path(@book), class: "button-white-outline" %>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
-
-<p>
-  <strong>Isbn:</strong>
-  <%= @book.isbn %>
-</p>
-
-<p>
-  <strong>Genre:</strong>
-  <%= @book.genre %>
-</p>
-
-<p>
-  <strong>Publish date:</strong>
-  <%= @book.publish_date %>
-</p>
-
-<p>
-  <strong>Num pages:</strong>
-  <%= @book.num_pages %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @book.image_url %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<br>
