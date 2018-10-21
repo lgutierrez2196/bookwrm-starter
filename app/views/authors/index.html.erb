@@ -2,7 +2,7 @@
   <div class="header-block-container">
     <h1>Authors</h1>
 <% if current_user.present? %>
-    <%= link_to '+ Add Authors', authors_path, class: 'button-white-outline' %>
+    <%= link_to '+ Add Authors', new_author_path, class: 'button-white-outline' %>
     <% end %>
   </div>
 </header>
