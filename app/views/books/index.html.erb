@@ -1,0 +1,31 @@
+<header class="page-header">
+  <div class="header-block-container">
+    <h1>Browse Books</h1>
+    <%= link_to '+ New Book', new_book_path, class: 'button-white-outline' %>
+  </div>
+</header>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Books</h1>
+
+<section class="book-block-container">
+  <div class="books">
+    <% @books.each do |book| %> 
+     <div class= "book-cover">
+        <% if book.image_url %>
+          <%= image_tag book.image_url %>
+          <% end %>
+        </div>
+        <div class="text-block">
+            <hr5><%= link_to book.title, book_path(book) %></hr5>
+            <h6><%= link_to book.author.full_name, author_path(book.author) %></h6>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </section>
+
+<br>
+
+<%= link_to 'New Book', new_book_path %>
