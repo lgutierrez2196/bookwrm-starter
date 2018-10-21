@@ -2,7 +2,7 @@
   <div class="header-block-container">
     <h1>Browse Books</h1>
     <% if current_user.present? %>
-      <%= link_to '+ New Books', books_path, class: 'button-white-outline' %>
+      <%= link_to '+ New Books', new_book_path, class: 'button-white-outline' %>
     <% end %>  
   </div>
 </header>
