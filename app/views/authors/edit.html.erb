@@ -2,7 +2,7 @@
 	<div class="header-block-container">
 		<% if current_user.present? %>
 		<h1>Edit Author</h1>
-		<%= link_to 'Edit', edit_author_path, @author class: 'button-white-outline' %>
+		<%= link_to 'Edit', edit_author_path(@author), class: 'button-white-outline' %>
 		<% end %>
 	</div>
 </header>
