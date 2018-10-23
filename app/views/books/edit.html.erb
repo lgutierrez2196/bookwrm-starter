@@ -1,6 +1,15 @@
-<h1>Editing Book</h1>
 
-<%= render 'form', book: @book %>
+<header class="page-header">
+	<div class="header-block-container">
+		<% if current_user.present? %>
+		<h1>Edit Book</h1>
+		<%= link_to 'Edit', edit_book_path(@book), class: 'button-white-outline' %>
+		<% end %>
+	</div>
+</header>
 
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+<div class="form-block-container">
+	<div class="card">
+		<%= render 'form', book: @book %>
+	</div>
+</div>
