@@ -1,7 +1,9 @@
 <header class="page-header">
   <div class="header-block-container">
+    <% if current_user.present? %>
     <h1>Editing Book</h1>
-    <%= link_to 'View Book', @book, class: 'button-white-outline' %>
+    <%= link_to 'Edit', edit_book_path(@book), class: 'button-white-outline' %>
+		<% end %>
   </div>
 </header>
 
